@@ -7,24 +7,16 @@ namespace ConsoleApp9
     {
         static void Main(string[] args)
         {
-            var list = new List<string>() { "Type of Bulb: \t\t" + "OperVolt: \t" + "PowCons:  \t" + "ColorTemp:  \t" + "ColorSet:  \t" };
-            list.Add(new SingleColorLED() { operVolt = "110V", powCons = "9W", colorTemp = "5500K"});
+            var list = new ListOfBulbs();
+            list.Add(new SingleColorLED() { operVolt = "110V", powCons = "9W", colorTemp = "6000K" });
             list.Add(new IncandescentLamp() { operVolt = "220V", powCons = "60W", colorTemp = "3200K" });
-            list.Add(new MultiColorLED() { operVolt = "110V", powCons = "15W", colorSet = new List<string>() { "Pink", "Red", "White", "Orange"} });
+            list.Add(new MultiColorLED() { operVolt = "110V", powCons = "15W", colorSet = new List<string>() { "Pink", "Red", "White", "Orange" } });
             list.Add(new SingleColorLED());
             list.Add(new MultiColorLED());
             list.Add(new IncandescentLamp());
-            ShowListOfBulbs(list);
+            list.Add(new MultiColorLED());
+            list.ShowListOfBulbs();
         }
-
-        static void ShowListOfBulbs(List<string> list)
-        {
-            foreach (var item in list)
-            {
-                Console.WriteLine(item);
-            }
-        }
-        
     }
 
     abstract class Bulb
@@ -35,7 +27,7 @@ namespace ConsoleApp9
     }
 
     class MultiColorLED : Bulb
-    {        
+    {
         public List<string> colorSet { get; set; }
 
         public MultiColorLED(string _operVolt, string _powCons, List<string> _colorSet)
@@ -48,25 +40,21 @@ namespace ConsoleApp9
         {
             operVolt = "110V";
             powCons = "12W";
-            colorSet = new List<string>{ "White", "Blue", "Green", "Yelow"};
+            colorSet = new List<string> { "White", "Blue", "Green", "Yelow" };
         }
-        private string ConvertToString()
+        public string ConvertToString()
         {
             if (colorSet == null)
             {
                 throw new ArgumentException("color set is needed!");
             }
             string _ = string.Empty;
-            foreach(var item in colorSet)
+            foreach (var item in colorSet)
             {
-                _+= item + ", ";
+                _ += item + ", ";
             }
             return _;
         }
-
-        public static implicit operator string(MultiColorLED bulb) => 
-            ("MultiColorLED \t\t" + bulb.operVolt + " \t\t" + bulb.powCons + " \t\t"  + " - \t\t" + bulb.ConvertToString() + " \t");
-
     }
 
     class SingleColorLED : Bulb
@@ -84,8 +72,6 @@ namespace ConsoleApp9
             powCons = "10W";
             colorTemp = "5000K";
         }
-        public static implicit operator string (SingleColorLED bulb) => 
-            ("SingleColorLED \t\t" + bulb.operVolt + " \t\t" + bulb.powCons + " \t\t" + bulb.colorTemp + " \t\t" + " - \t");
     }
 
     class IncandescentLamp : Bulb
@@ -103,8 +89,33 @@ namespace ConsoleApp9
             powCons = "10W";
             colorTemp = "3500K";
         }
-        public static implicit operator string(IncandescentLamp bulb) =>
-            ("IncandescentLamp \t" + bulb.operVolt + " \t\t" + bulb.powCons + " \t\t" + bulb.colorTemp + " \t\t" + " - \t");
     }
 
+    class ListOfBulbs
+    {
+        List<string> listOfBulbs = new List<string>();
+
+
+        public void Add(MultiColorLED bulb)
+        {
+            listOfBulbs.Add("MultiColorLED \t\t" + bulb.operVolt + " \t\t" + bulb.powCons + " \t\t" + " - \t\t" + bulb.ConvertToString() + " \t");
+        }
+
+        public void Add(SingleColorLED bulb)
+        {
+            listOfBulbs.Add("SingleColorLED \t\t" + bulb.operVolt + " \t\t" + bulb.powCons + " \t\t" + bulb.colorTemp + " \t\t" + " - \t");
+        }
+
+        public void Add(IncandescentLamp bulb)
+        {
+            listOfBulbs.Add("IncandescentLamp \t" + bulb.operVolt + " \t\t" + bulb.powCons + " \t\t" + bulb.colorTemp + " \t\t" + " - \t");
+        }
+        public void ShowListOfBulbs()
+        {
+            foreach (var item in listOfBulbs)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
 }
