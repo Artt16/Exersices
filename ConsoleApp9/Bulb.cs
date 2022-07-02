@@ -8,6 +8,7 @@ namespace Bulbs
 {
     abstract class Bulb
     {
+        public string brand { get; set; }
         public string operVolt { get; set; }
         public string powCons { get; set; }
 

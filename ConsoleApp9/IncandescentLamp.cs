@@ -10,8 +10,9 @@ namespace Bulbs
     {
         public string colorTemp { get; set; }
         public readonly string typeOfBulb;
-        public IncandescentLamp(string _operVolt, string _powCons, string _colorTemp)
+        public IncandescentLamp(string _brand, string _operVolt, string _powCons, string _colorTemp)
         {
+            brand = _brand;
             typeOfBulb = "IncandescentLamp";
             operVolt = _operVolt;
             powCons = _powCons;
@@ -19,6 +20,7 @@ namespace Bulbs
         }
         public IncandescentLamp()
         {
+            brand = "No name  ";
             typeOfBulb = "IncandescentLamp";
             operVolt = "110V";
             powCons = "10W";
