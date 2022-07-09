@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bulbs
 {
+    // NOTE: См. замечания для ShowCommonBulbInfo
     class ShowFullBulbInfo
     {
         public static void ShowFullInfo(ListOfBulbs listOfBulbs)
