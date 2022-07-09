@@ -21,7 +21,7 @@ namespace Bulbs
         // Пример: new SingleColorLED() {brand = ...
         public IncandescentLamp(string _brand, string _operVolt, string _powCons, string _colorTemp)
         {
-            brand = _brand;
+            Brand = _brand;
             typeOfBulb = "IncandescentLamp";
             operVolt = _operVolt;
             powCons = _powCons;
@@ -37,7 +37,7 @@ namespace Bulbs
         // создаваемой через этот конструктор?..
         public IncandescentLamp()
         {
-            brand = "No name  ";
+            Brand = "No name  ";
             typeOfBulb = "IncandescentLamp";
             operVolt = "110V";
             powCons = "10W";
