@@ -19,14 +19,7 @@ namespace Bulbs
         // Они у тебя публичны, и значит могут быть проинициализированы с помощью синтаксиса,
         // который ты уже использоуешь при создании ламп в списке.
         // Пример: new SingleColorLED() {brand = ...
-        public IncandescentLamp(string _brand, string _operVolt, string _powCons, string _colorTemp)
-        {
-            Brand = _brand;
-            TypeOfBulb = "IncandescentLamp";
-            OperVolt = _operVolt;
-            PowCons = _powCons;
-            ColorTemp = _colorTemp;
-        }
+        
 
         // NOTE: Конструктор без параметров я бы вообще сделал приватным,
         // чтобы нельзя было создавать лампу с какими-то непонятными параметрами.
