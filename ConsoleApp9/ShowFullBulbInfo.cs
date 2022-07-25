@@ -40,7 +40,7 @@ namespace Bulbs
         {
             foreach (var singleColorLED in singleColorLEDs)
             {
-                Console.WriteLine(singleColorLED.typeOfBulb + "\t\t" + singleColorLED.Brand + "\t" + singleColorLED.OperVolt + "\t\t" + singleColorLED.PowCons + "\t\t" + singleColorLED.ColorTemp);
+                Console.WriteLine(singleColorLED.TypeOfBulb + "\t\t" + singleColorLED.Brand + "\t" + singleColorLED.OperVolt + "\t\t" + singleColorLED.PowCons + "\t\t" + singleColorLED.ColorTemp);
             }
         }
 
