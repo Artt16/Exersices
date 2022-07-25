@@ -8,7 +8,7 @@ namespace Bulbs
 {
     class SingleColorLED : Bulb
     {
-        public string colorTemp { get; set; }
+        public string ColorTemp { get; set; }
         public readonly string typeOfBulb;
         public SingleColorLED(string _brand, string _operVolt, string _powCons, string _colorTemp)
         {
@@ -16,7 +16,7 @@ namespace Bulbs
             typeOfBulb = "SingleColor";
             OperVolt = _operVolt;
             PowCons = _powCons;
-            colorTemp = _colorTemp;
+            ColorTemp = _colorTemp;
         }
         public SingleColorLED()
         {
@@ -24,7 +24,7 @@ namespace Bulbs
             typeOfBulb = "SingleColor";
             OperVolt = "110V";
             PowCons = "10W";
-            colorTemp = "5000K";
+            ColorTemp = "5000K";
         }
     }
 }
