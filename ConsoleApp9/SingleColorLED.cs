@@ -14,7 +14,7 @@ namespace Bulbs
         {
             Brand = _brand;
             typeOfBulb = "SingleColor";
-            operVolt = _operVolt;
+            OperVolt = _operVolt;
             powCons = _powCons;
             colorTemp = _colorTemp;
         }
@@ -22,7 +22,7 @@ namespace Bulbs
         {
             Brand = "No name  ";
             typeOfBulb = "SingleColor";
-            operVolt = "110V";
+            OperVolt = "110V";
             powCons = "10W";
             colorTemp = "5000K";
         }

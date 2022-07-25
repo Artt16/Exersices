@@ -10,7 +10,7 @@ namespace Bulbs
     {
         // NOTE: Замечание по неймингу (именованию), свойства именуются с использованием стиля CamelCase (PascalCase).
         public string Brand { get; set; }
-        public string operVolt { get; set; }
+        public string OperVolt { get; set; }
         public string powCons { get; set; }
 
     }

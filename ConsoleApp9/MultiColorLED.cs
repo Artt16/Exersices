@@ -15,7 +15,7 @@ namespace Bulbs
         {
             Brand = _brand;
             typeOfBulb = "MultiColorLED";
-            operVolt = _operVolt;
+            OperVolt = _operVolt;
             powCons = _powCons;
             colorSet = _colorSet;
         }
@@ -23,7 +23,7 @@ namespace Bulbs
         {
             Brand = "No name  ";
             typeOfBulb = "MultiColorLED";
-            operVolt = "110V";
+            OperVolt = "110V";
             powCons = "12W";
             colorSet = new List<string> { "White", "Blue", "Green", "Yelow" };
         }

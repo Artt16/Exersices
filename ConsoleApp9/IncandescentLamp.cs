@@ -23,7 +23,7 @@ namespace Bulbs
         {
             Brand = _brand;
             typeOfBulb = "IncandescentLamp";
-            operVolt = _operVolt;
+            OperVolt = _operVolt;
             powCons = _powCons;
             colorTemp = _colorTemp;
         }
@@ -39,7 +39,7 @@ namespace Bulbs
         {
             Brand = "No name  ";
             typeOfBulb = "IncandescentLamp";
-            operVolt = "110V";
+            OperVolt = "110V";
             powCons = "10W";
             colorTemp = "3500K";
         }
