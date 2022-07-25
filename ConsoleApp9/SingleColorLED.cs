@@ -8,9 +8,9 @@ namespace Bulbs
 {
     class SingleColorLED : Bulb
     {
-        public string ColorTemp { get; set; }
-        public readonly string TypeOfBulb;
-        private SingleColorLED()
+        private string ColorTemp { get; set; }
+        private readonly string TypeOfBulb;
+        public SingleColorLED()
         {
             Brand = "No name  ";
             TypeOfBulb = "SingleColor";
