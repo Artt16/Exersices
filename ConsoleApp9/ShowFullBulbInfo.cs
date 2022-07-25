@@ -31,7 +31,7 @@ namespace Bulbs
         {
             foreach (var multiColorLED in multiColorLEDs)
             {
-                Console.WriteLine(multiColorLED.typeOfBulb + "\t\t" + multiColorLED.Brand + "\t" + multiColorLED.OperVolt + "\t\t" + multiColorLED.PowCons + "\t\t\t\t" + string.Join(",", multiColorLED.ColorSet));
+                Console.WriteLine(multiColorLED.TypeOfBulb + "\t\t" + multiColorLED.Brand + "\t" + multiColorLED.OperVolt + "\t\t" + multiColorLED.PowCons + "\t\t\t\t" + string.Join(",", multiColorLED.ColorSet));
             }
             
         }
