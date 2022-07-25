@@ -8,10 +8,10 @@ namespace Bulbs
 {
     class MultiColorLED : Bulb
     {
-        public List<string> ColorSet { get; set; }
-        public readonly string TypeOfBulb;
+        private List<string> ColorSet { get; set; }
+        private readonly string TypeOfBulb;
 
-        private MultiColorLED()
+        public MultiColorLED()
         {
             Brand = "No name  ";
             TypeOfBulb = "MultiColorLED";

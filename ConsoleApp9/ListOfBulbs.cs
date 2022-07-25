@@ -15,29 +15,11 @@ namespace Bulbs
     // NOTE: Какой смысл делать отдельную коллекцию для каждого типа ламп?
     class ListOfBulbs
     {
-        public List<SingleColorLED> singleColorLEDs;
-        public List<MultiColorLED> multiColorLEDs;
-        public List<IncandescentLamp> incandescentLamps;
+        public List<Bulb> BulbsList = new List<Bulb>();
 
-        public ListOfBulbs()
+        public void Add(Bulb bulb)
         {
-            singleColorLEDs = new List<SingleColorLED>();
-            multiColorLEDs = new List<MultiColorLED>();
-            incandescentLamps = new List<IncandescentLamp>();
-        }
-        public void Add(SingleColorLED singleColorLED)
-        {            
-            singleColorLEDs.Add(singleColorLED);            
-        }
-
-        public void Add(MultiColorLED multiColorLED)
-        {
-            multiColorLEDs.Add(multiColorLED);            
-        }
-
-        public void Add(IncandescentLamp incandescentLamp)
-        {
-            incandescentLamps.Add(incandescentLamp);            
-        }        
+            BulbsList.Add(bulb);
+        }      
     }
 }
