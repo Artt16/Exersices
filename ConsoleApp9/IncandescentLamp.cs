@@ -10,7 +10,7 @@ namespace Bulbs
     class IncandescentLamp : Bulb
     {
         public string ColorTemp { get; set; }
-        public readonly string typeOfBulb;
+        public readonly string TypeOfBulb;
 
         // NOTE: По неймингу: аргументы именуются с использованием стиля lowerCamelCase.
 
@@ -22,7 +22,7 @@ namespace Bulbs
         public IncandescentLamp(string _brand, string _operVolt, string _powCons, string _colorTemp)
         {
             Brand = _brand;
-            typeOfBulb = "IncandescentLamp";
+            TypeOfBulb = "IncandescentLamp";
             OperVolt = _operVolt;
             PowCons = _powCons;
             ColorTemp = _colorTemp;
@@ -38,7 +38,7 @@ namespace Bulbs
         public IncandescentLamp()
         {
             Brand = "No name  ";
-            typeOfBulb = "IncandescentLamp";
+            TypeOfBulb = "IncandescentLamp";
             OperVolt = "110V";
             PowCons = "10W";
             ColorTemp = "3500K";
