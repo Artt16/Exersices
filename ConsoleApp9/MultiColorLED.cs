@@ -11,14 +11,6 @@ namespace Bulbs
         public List<string> ColorSet { get; set; }
         public readonly string TypeOfBulb;
 
-        public MultiColorLED(string _brand, string _operVolt, string _powCons, List<string> _colorSet)
-        {
-            Brand = _brand;
-            TypeOfBulb = "MultiColorLED";
-            OperVolt = _operVolt;
-            PowCons = _powCons;
-            ColorSet = _colorSet;
-        }
         public MultiColorLED()
         {
             Brand = "No name  ";
