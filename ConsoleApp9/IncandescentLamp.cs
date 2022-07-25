@@ -9,8 +9,8 @@ namespace Bulbs
     // NOTE: Замечания в этом классе относятся и к другим классам специфических ламп.
     class IncandescentLamp : Bulb
     {
-        public string ColorTemp { get; set; }
-        public readonly string TypeOfBulb;
+        private string ColorTemp { get; set; }
+        private readonly string TypeOfBulb;
 
         // NOTE: По неймингу: аргументы именуются с использованием стиля lowerCamelCase.
 
@@ -28,7 +28,7 @@ namespace Bulbs
         // И главное: как разработчик использующий этот твой конструктор,
         // догадается, какими именно значениями проинициализируются параметры лампы,
         // создаваемой через этот конструктор?..
-        private IncandescentLamp()
+        public IncandescentLamp()
         {
             Brand = "No name  ";
             TypeOfBulb = "IncandescentLamp";
