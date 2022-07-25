@@ -48,7 +48,7 @@ namespace Bulbs
         {
             foreach (var incandescentLamp in incandescentLamps)
             {
-                Console.WriteLine(incandescentLamp.typeOfBulb + "\t" + incandescentLamp.Brand + "\t" + incandescentLamp.OperVolt + "\t\t" + incandescentLamp.PowCons + "\t\t" + incandescentLamp.colorTemp);
+                Console.WriteLine(incandescentLamp.typeOfBulb + "\t" + incandescentLamp.Brand + "\t" + incandescentLamp.OperVolt + "\t\t" + incandescentLamp.PowCons + "\t\t" + incandescentLamp.ColorTemp);
             }
         }
     }

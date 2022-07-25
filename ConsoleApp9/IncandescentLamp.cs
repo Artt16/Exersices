@@ -9,7 +9,7 @@ namespace Bulbs
     // NOTE: Замечания в этом классе относятся и к другим классам специфических ламп.
     class IncandescentLamp : Bulb
     {
-        public string colorTemp { get; set; }
+        public string ColorTemp { get; set; }
         public readonly string typeOfBulb;
 
         // NOTE: По неймингу: аргументы именуются с использованием стиля lowerCamelCase.
@@ -25,7 +25,7 @@ namespace Bulbs
             typeOfBulb = "IncandescentLamp";
             OperVolt = _operVolt;
             PowCons = _powCons;
-            colorTemp = _colorTemp;
+            ColorTemp = _colorTemp;
         }
 
         // NOTE: Конструктор без параметров я бы вообще сделал приватным,
@@ -41,7 +41,7 @@ namespace Bulbs
             typeOfBulb = "IncandescentLamp";
             OperVolt = "110V";
             PowCons = "10W";
-            colorTemp = "3500K";
+            ColorTemp = "3500K";
         }
     }
 }
