@@ -10,7 +10,7 @@ namespace Bulbs
     {
         public string ColorTemp { get; set; }
         public readonly string TypeOfBulb;
-        public SingleColorLED()
+        private SingleColorLED()
         {
             Brand = "No name  ";
             TypeOfBulb = "SingleColor";
