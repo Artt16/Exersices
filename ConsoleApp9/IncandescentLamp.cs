@@ -28,7 +28,7 @@ namespace Bulbs
         // И главное: как разработчик использующий этот твой конструктор,
         // догадается, какими именно значениями проинициализируются параметры лампы,
         // создаваемой через этот конструктор?..
-        public IncandescentLamp()
+        private IncandescentLamp()
         {
             Brand = "No name  ";
             TypeOfBulb = "IncandescentLamp";
