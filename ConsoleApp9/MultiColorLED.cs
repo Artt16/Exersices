@@ -9,7 +9,7 @@ namespace Bulbs
     class MultiColorLED : Bulb
     {
         public List<string> ColorSet { get; set; }
-        public readonly string typeOfBulb;
+        public readonly string TypeOfBulb;
 
         public MultiColorLED(string _brand, string _operVolt, string _powCons, List<string> _colorSet)
         {
