@@ -31,7 +31,7 @@ namespace Bulbs
         {
             foreach (var multiColorLED in multiColorLEDs)
             {
-                Console.WriteLine(multiColorLED.typeOfBulb + "\t\t" + multiColorLED.Brand + "\t" + multiColorLED.OperVolt + "\t\t" + multiColorLED.powCons + "\t\t\t\t" + string.Join(",", multiColorLED.colorSet));
+                Console.WriteLine(multiColorLED.typeOfBulb + "\t\t" + multiColorLED.Brand + "\t" + multiColorLED.OperVolt + "\t\t" + multiColorLED.PowCons + "\t\t\t\t" + string.Join(",", multiColorLED.colorSet));
             }
             
         }
@@ -40,7 +40,7 @@ namespace Bulbs
         {
             foreach (var singleColorLED in singleColorLEDs)
             {
-                Console.WriteLine(singleColorLED.typeOfBulb + "\t\t" + singleColorLED.Brand + "\t" + singleColorLED.OperVolt + "\t\t" + singleColorLED.powCons + "\t\t" + singleColorLED.colorTemp);
+                Console.WriteLine(singleColorLED.typeOfBulb + "\t\t" + singleColorLED.Brand + "\t" + singleColorLED.OperVolt + "\t\t" + singleColorLED.PowCons + "\t\t" + singleColorLED.colorTemp);
             }
         }
 
@@ -48,7 +48,7 @@ namespace Bulbs
         {
             foreach (var incandescentLamp in incandescentLamps)
             {
-                Console.WriteLine(incandescentLamp.typeOfBulb + "\t" + incandescentLamp.Brand + "\t" + incandescentLamp.OperVolt + "\t\t" + incandescentLamp.powCons + "\t\t" + incandescentLamp.colorTemp);
+                Console.WriteLine(incandescentLamp.typeOfBulb + "\t" + incandescentLamp.Brand + "\t" + incandescentLamp.OperVolt + "\t\t" + incandescentLamp.PowCons + "\t\t" + incandescentLamp.colorTemp);
             }
         }
     }

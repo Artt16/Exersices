@@ -24,7 +24,7 @@ namespace Bulbs
             Brand = _brand;
             typeOfBulb = "IncandescentLamp";
             OperVolt = _operVolt;
-            powCons = _powCons;
+            PowCons = _powCons;
             colorTemp = _colorTemp;
         }
 
@@ -40,7 +40,7 @@ namespace Bulbs
             Brand = "No name  ";
             typeOfBulb = "IncandescentLamp";
             OperVolt = "110V";
-            powCons = "10W";
+            PowCons = "10W";
             colorTemp = "3500K";
         }
     }

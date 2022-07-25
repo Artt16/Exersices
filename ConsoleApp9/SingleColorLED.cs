@@ -15,7 +15,7 @@ namespace Bulbs
             Brand = _brand;
             typeOfBulb = "SingleColor";
             OperVolt = _operVolt;
-            powCons = _powCons;
+            PowCons = _powCons;
             colorTemp = _colorTemp;
         }
         public SingleColorLED()
@@ -23,7 +23,7 @@ namespace Bulbs
             Brand = "No name  ";
             typeOfBulb = "SingleColor";
             OperVolt = "110V";
-            powCons = "10W";
+            PowCons = "10W";
             colorTemp = "5000K";
         }
     }
