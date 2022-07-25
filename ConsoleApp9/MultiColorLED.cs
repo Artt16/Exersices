@@ -11,7 +11,7 @@ namespace Bulbs
         public List<string> ColorSet { get; set; }
         public readonly string TypeOfBulb;
 
-        public MultiColorLED()
+        private MultiColorLED()
         {
             Brand = "No name  ";
             TypeOfBulb = "MultiColorLED";
