@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Bulbs
 {
-    abstract class Bulb
+    public abstract class Bulb
     {
-        // NOTE: Замечание по неймингу (именованию), свойства именуются с использованием стиля CamelCase (PascalCase).
         private protected string Brand { get; set; }
         private protected string OperVolt { get; set; }
-        private protected string PowCons { get; set; }
-
+        private protected string PowCons { get; set; }        
     }
 }

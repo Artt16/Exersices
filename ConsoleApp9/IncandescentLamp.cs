@@ -6,35 +6,32 @@ using System.Threading.Tasks;
 
 namespace Bulbs
 {
-    // NOTE: Замечания в этом классе относятся и к другим классам специфических ламп.
-    class IncandescentLamp : Bulb
+    public class IncandescentLamp : Bulb
     {
         private string ColorTemp { get; set; }
-        private readonly string TypeOfBulb;
-
-        // NOTE: По неймингу: аргументы именуются с использованием стиля lowerCamelCase.
-
-        // Добавлять инициализацию аргументов через конструктор имеет смысл если
-        // инициализируемые свойства не имеют публичных сеттеров (set).
-        // Они у тебя публичны, и значит могут быть проинициализированы с помощью синтаксиса,
-        // который ты уже использоуешь при создании ламп в списке.
-        // Пример: new SingleColorLED() {brand = ...
-        
-
-        // NOTE: Конструктор без параметров я бы вообще сделал приватным,
-        // чтобы нельзя было создавать лампу с какими-то непонятными параметрами.
-        // Какой смысл такой лампы? Какова вероятность, что эти дефолтные параметры
-        // совпадут с теми, которые кому-то нужны?
-        // И главное: как разработчик использующий этот твой конструктор,
-        // догадается, какими именно значениями проинициализируются параметры лампы,
-        // создаваемой через этот конструктор?..
-        public IncandescentLamp()
+        private string TypeOfBulb { get; set; }
+        private IncandescentLamp()
         {
             Brand = "No name  ";
             TypeOfBulb = "IncandescentLamp";
             OperVolt = "110V";
-            PowCons = "10W";
+            PowCons = "100W";
             ColorTemp = "3500K";
+        }
+
+        public IncandescentLamp(string brand) : this ()
+        {           
+            Brand = brand;
+        }
+        public override string ToString()
+        {
+            StringBuilder incandescentLamb = new StringBuilder();
+            incandescentLamb.AppendLine($"TypeOfBulb: {TypeOfBulb}");
+            incandescentLamb.AppendLine($"Brand: {Brand}");
+            incandescentLamb.AppendLine($"OperVolt: {OperVolt}");
+            incandescentLamb.AppendLine($"PowCons: {PowCons}");
+            incandescentLamb.AppendLine($"ColorTemp: {ColorTemp}");
+            return incandescentLamb.ToString();
         }
     }
 }

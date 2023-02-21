@@ -8,14 +8,25 @@ namespace Bulbs
     {
         static void Main(string[] args)
         {
-            var list = new ListOfBulbs();
-            list.Add(new SingleColorLED());
-            list.Add(new MultiColorLED());
-            list.Add(new IncandescentLamp());
-            list.Add(new MultiColorLED());
-            ShowCommonBulbInfo.ShowCommonInfo(list);
-            Console.WriteLine("\n\n\n\n\n");
-            ShowFullBulbInfo.ShowFullInfo(list);
+            List<Bulb> list = new List<Bulb>
+            {
+                new SingleColorLED("Panasonic"),
+                new IncandescentLamp("Philips"),
+                new MultiColorLED("Sony")
+            };
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Full bulb info:");
+            for (int i = 0; i < list.Count(); i++)
+            {
+                ShowBulbInfo.Full(list[i]);
+            }
+            
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Common bulb info:");
+            ShowBulbInfo.Common(list[1]);
+            ShowBulbInfo.Common(list[0]);
+            ShowBulbInfo.Common(list[2]);
         }
     }
 }
