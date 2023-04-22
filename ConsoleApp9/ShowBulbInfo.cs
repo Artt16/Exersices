@@ -21,24 +21,25 @@ namespace Bulbs
         public static void Common(Bulb bulb)
         {
             int index = 0;
+
             if (bulb == null)
             {
                 throw new ArgumentNullException("Bulb is null!");
             }
 
-            var full = bulb.ToString();
+            var fillInfo = bulb.ToString();
 
-            if (full.Contains("ColorTemp"))
+            if (fillInfo.Contains("ColorTemp"))
             {
-                index = full.IndexOf("ColorTemp");
+                index = fillInfo.IndexOf("ColorTemp");
             }
 
-            if (full.Contains("ColorSet"))
+            if (fillInfo.Contains("ColorSet"))
             {
-                index = full.IndexOf("ColorSet");
+                index = fillInfo.IndexOf("ColorSet");
             }
             string common = string.Empty;
-            common = full[0..index];
+            common = fillInfo[0..index];
             Console.WriteLine(common);            
         }       
     }
