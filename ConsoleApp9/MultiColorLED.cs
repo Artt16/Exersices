@@ -8,16 +8,16 @@ namespace Bulbs
 {
     class MultiColorLED : Bulb
     {
-        private List<string> ColorSet { get; set; }
-        private string TypeOfBulb { get; set; }
+        private List<string> _colorSet;
+        private string _typeOfBulb;
 
         private MultiColorLED()
         {
             Brand = "No name";
-            TypeOfBulb = "MultiColorLED";
+            _typeOfBulb = "MultiColorLED";
             OperationVoltage = 110;
             PowerConsumption = 12;
-            ColorSet = new List<string> { "White", "Blue", "Green", "Yelow" };
+            _colorSet = new List<string> { "White", "Blue", "Green", "Yelow" };
         }
 
         public MultiColorLED(string brand) : this()
@@ -28,8 +28,8 @@ namespace Bulbs
         public override string IndividualInfo()
         {
             StringBuilder multiColorLED = new StringBuilder();
-            multiColorLED.AppendLine($"TypeOfBulb: {TypeOfBulb}");
-            multiColorLED.AppendLine($"ColorSet: {string.Join(',', ColorSet)}");
+            multiColorLED.AppendLine($"TypeOfBulb: {_typeOfBulb}");
+            multiColorLED.AppendLine($"ColorSet: {string.Join(',', _colorSet)}");
             return base.ToString() + multiColorLED.ToString();
         }
     }

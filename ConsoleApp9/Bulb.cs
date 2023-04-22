@@ -10,7 +10,7 @@ namespace Bulbs
     {
         public string Brand { get; set; }
         public int OperationVoltage { get; set; }
-        public int PowerConsumption { get; set; }
+        public int PowerConsumption { get; set; }        
         public abstract string IndividualInfo();
         public override string ToString()
         {
