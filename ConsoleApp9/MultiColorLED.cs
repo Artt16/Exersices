@@ -15,8 +15,8 @@ namespace Bulbs
         {
             Brand = "No name  ";
             TypeOfBulb = "MultiColorLED";
-            OperVolt = "110V";
-            PowCons = "12W";
+            OperationVoltage = "110V";
+            PowerConsumption = "12W";
             ColorSet = new List<string> { "White", "Blue", "Green", "Yelow" };
         }
 
@@ -30,8 +30,8 @@ namespace Bulbs
             StringBuilder  multiColorLED = new StringBuilder();
             multiColorLED.AppendLine($"TypeOfBulb: {TypeOfBulb}");
             multiColorLED.AppendLine($"Brand: {Brand}");
-            multiColorLED.AppendLine($"OperVolt: {OperVolt}");
-            multiColorLED.AppendLine($"PowCons: {PowCons}");
+            multiColorLED.AppendLine($"Operation voltage: {OperationVoltage}");
+            multiColorLED.AppendLine($"Power consumption: {PowerConsumption}");
             multiColorLED.AppendLine($"ColorSet: {string.Join(',', ColorSet)}");
             return multiColorLED.ToString();
         }

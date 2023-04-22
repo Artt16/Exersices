@@ -8,15 +8,15 @@ namespace Bulbs
 {
     class SingleColorLED : Bulb
     {
-        private string ColorTemp { get; set; }
+        private string ColorTemperature { get; set; }
         private string TypeOfBulb { get; set; }
         private SingleColorLED()
         {
             Brand = "No name  ";
             TypeOfBulb = "SingleColor";
-            OperVolt = "110V";
-            PowCons = "10W";
-            ColorTemp = "5000K";
+            OperationVoltage = "110V";
+            PowerConsumption = "10W";
+            ColorTemperature = "5000K";
         }
 
         public SingleColorLED(string brand) : this ()
@@ -29,9 +29,9 @@ namespace Bulbs
             StringBuilder singleColorLED = new StringBuilder();
             singleColorLED.AppendLine($"TypeOfBulb: {TypeOfBulb}");
             singleColorLED.AppendLine($"Brand: {Brand}");
-            singleColorLED.AppendLine($"OperVolt: {OperVolt}");
-            singleColorLED.AppendLine($"PowCons: {PowCons}");
-            singleColorLED.AppendLine($"ColorTemp: {ColorTemp}");
+            singleColorLED.AppendLine($"Operation voltage: {OperationVoltage}");
+            singleColorLED.AppendLine($"Power consumption: {PowerConsumption}");
+            singleColorLED.AppendLine($"Color temperature: {ColorTemperature}");
             return singleColorLED.ToString();
         }
     }

@@ -9,7 +9,7 @@ namespace Bulbs
     public abstract class Bulb
     {
         protected string Brand { get; set; }
-        protected string OperVolt { get; set; }
-        protected string PowCons { get; set; }        
+        protected string OperationVoltage { get; set; }
+        protected string PowerConsumption { get; set; }        
     }
 }

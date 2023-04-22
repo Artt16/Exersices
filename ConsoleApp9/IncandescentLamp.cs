@@ -8,15 +8,15 @@ namespace Bulbs
 {
     public class IncandescentLamp : Bulb
     {
-        private string ColorTemp { get; set; }
+        private string ColorTemperature { get; set; }
         private string TypeOfBulb { get; set; }
         private IncandescentLamp()
         {
             Brand = "No name  ";
             TypeOfBulb = "IncandescentLamp";
-            OperVolt = "110V";
-            PowCons = "100W";
-            ColorTemp = "3500K";
+            OperationVoltage = "110V";
+            PowerConsumption = "100W";
+            ColorTemperature = "3500K";
         }
 
         public IncandescentLamp(string brand) : this ()
@@ -28,9 +28,9 @@ namespace Bulbs
             StringBuilder incandescentLamb = new StringBuilder();
             incandescentLamb.AppendLine($"TypeOfBulb: {TypeOfBulb}");
             incandescentLamb.AppendLine($"Brand: {Brand}");
-            incandescentLamb.AppendLine($"OperVolt: {OperVolt}");
-            incandescentLamb.AppendLine($"PowCons: {PowCons}");
-            incandescentLamb.AppendLine($"ColorTemp: {ColorTemp}");
+            incandescentLamb.AppendLine($"Operation voltage: {OperationVoltage}");
+            incandescentLamb.AppendLine($"Power consumption: {PowerConsumption}");
+            incandescentLamb.AppendLine($"Color temperature: {ColorTemperature}");
             return incandescentLamb.ToString();
         }
     }
