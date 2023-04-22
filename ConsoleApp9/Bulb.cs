@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace Bulbs
 {
-    abstract class Bulb
+    public abstract class Bulb
     {
-        // NOTE: Замечание по неймингу (именованию), свойства именуются с использованием стиля CamelCase (PascalCase).
         public string Brand { get; set; }
-        public string operVolt { get; set; }
-        public string powCons { get; set; }
-
+        public int OperationVoltage { get; set; }
+        public int PowerConsumption { get; set; }        
+        public abstract string IndividualInfo();
+        public override string ToString()
+        {
+            StringBuilder bulb = new StringBuilder();
+            bulb.AppendLine($"Brand: {Brand}");
+            bulb.AppendLine($"Operation voltage: {OperationVoltage}");
+            bulb.AppendLine($"Power consumption: {PowerConsumption}");
+            return bulb.ToString();
+        }
     }
 }

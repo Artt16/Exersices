@@ -6,42 +6,29 @@ using System.Threading.Tasks;
 
 namespace Bulbs
 {
-    // NOTE: Замечания в этом классе относятся и к другим классам специфических ламп.
-    class IncandescentLamp : Bulb
+    public class IncandescentLamp : Bulb
     {
-        public string colorTemp { get; set; }
-        public readonly string typeOfBulb;
-
-        // NOTE: По неймингу: аргументы именуются с использованием стиля lowerCamelCase.
-
-        // Добавлять инициализацию аргументов через конструктор имеет смысл если
-        // инициализируемые свойства не имеют публичных сеттеров (set).
-        // Они у тебя публичны, и значит могут быть проинициализированы с помощью синтаксиса,
-        // который ты уже использоуешь при создании ламп в списке.
-        // Пример: new SingleColorLED() {brand = ...
-        public IncandescentLamp(string _brand, string _operVolt, string _powCons, string _colorTemp)
+        private string _colorTemperature;
+        private string _typeOfBulb;
+        private IncandescentLamp()
         {
-            Brand = _brand;
-            typeOfBulb = "IncandescentLamp";
-            operVolt = _operVolt;
-            powCons = _powCons;
-            colorTemp = _colorTemp;
+            Brand = "No name";
+            _typeOfBulb = "IncandescentLamp";
+            OperationVoltage = 110;
+            PowerConsumption = 100;
+            _colorTemperature = "3500K";
         }
 
-        // NOTE: Конструктор без параметров я бы вообще сделал приватным,
-        // чтобы нельзя было создавать лампу с какими-то непонятными параметрами.
-        // Какой смысл такой лампы? Какова вероятность, что эти дефолтные параметры
-        // совпадут с теми, которые кому-то нужны?
-        // И главное: как разработчик использующий этот твой конструктор,
-        // догадается, какими именно значениями проинициализируются параметры лампы,
-        // создаваемой через этот конструктор?..
-        public IncandescentLamp()
+        public IncandescentLamp(string brand) : this ()
+        {           
+            Brand = brand;
+        }
+        public override string IndividualInfo() 
         {
-            Brand = "No name  ";
-            typeOfBulb = "IncandescentLamp";
-            operVolt = "110V";
-            powCons = "10W";
-            colorTemp = "3500K";
+            StringBuilder incandescentLamb = new StringBuilder();
+            incandescentLamb.AppendLine($"TypeOfBulb: {_typeOfBulb}");
+            incandescentLamb.AppendLine($"Color temperature: {_colorTemperature}");
+            return base.ToString() + incandescentLamb.ToString();
         }
     }
 }

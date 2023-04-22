@@ -8,23 +8,28 @@ namespace Bulbs
 {
     class SingleColorLED : Bulb
     {
-        public string colorTemp { get; set; }
-        public readonly string typeOfBulb;
-        public SingleColorLED(string _brand, string _operVolt, string _powCons, string _colorTemp)
+        private string _colorTemperature;
+        private string _typeOfBulb;
+        private SingleColorLED()
         {
-            Brand = _brand;
-            typeOfBulb = "SingleColor";
-            operVolt = _operVolt;
-            powCons = _powCons;
-            colorTemp = _colorTemp;
+            Brand = "No name";
+            _typeOfBulb = "SingleColor";
+            OperationVoltage = 110;
+            PowerConsumption = 10;
+            _colorTemperature = "5000K";
         }
-        public SingleColorLED()
+
+        public SingleColorLED(string brand) : this ()
         {
-            Brand = "No name  ";
-            typeOfBulb = "SingleColor";
-            operVolt = "110V";
-            powCons = "10W";
-            colorTemp = "5000K";
+            Brand = brand;
+        }
+
+        public override string IndividualInfo()
+        {
+            StringBuilder singleColorLED = new StringBuilder();
+            singleColorLED.AppendLine($"TypeOfBulb: {_typeOfBulb}");
+            singleColorLED.AppendLine($"Color temperature: {_colorTemperature}");
+            return base.ToString() + singleColorLED.ToString();
         }
     }
 }
