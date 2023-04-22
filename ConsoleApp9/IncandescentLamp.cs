@@ -14,7 +14,7 @@ namespace Bulbs
         {
             Brand = "No name";
             TypeOfBulb = "IncandescentLamp";
-            OperationVoltage = "110V";
+            OperationVoltage = 110;
             PowerConsumption = "100W";
             ColorTemperature = "3500K";
         }

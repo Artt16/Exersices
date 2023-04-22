@@ -15,7 +15,7 @@ namespace Bulbs
         {
             Brand = "No name";
             TypeOfBulb = "MultiColorLED";
-            OperationVoltage = "110V";
+            OperationVoltage = 110;
             PowerConsumption = "12W";
             ColorSet = new List<string> { "White", "Blue", "Green", "Yelow" };
         }
