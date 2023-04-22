@@ -13,7 +13,7 @@ namespace Bulbs
 
         private MultiColorLED()
         {
-            Brand = "No name  ";
+            Brand = "No name";
             TypeOfBulb = "MultiColorLED";
             OperationVoltage = "110V";
             PowerConsumption = "12W";

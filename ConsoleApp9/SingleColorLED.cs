@@ -12,7 +12,7 @@ namespace Bulbs
         private string TypeOfBulb { get; set; }
         private SingleColorLED()
         {
-            Brand = "No name  ";
+            Brand = "No name";
             TypeOfBulb = "SingleColor";
             OperationVoltage = "110V";
             PowerConsumption = "10W";

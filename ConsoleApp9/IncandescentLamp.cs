@@ -12,7 +12,7 @@ namespace Bulbs
         private string TypeOfBulb { get; set; }
         private IncandescentLamp()
         {
-            Brand = "No name  ";
+            Brand = "No name";
             TypeOfBulb = "IncandescentLamp";
             OperationVoltage = "110V";
             PowerConsumption = "100W";
