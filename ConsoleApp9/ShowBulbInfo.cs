@@ -10,33 +10,36 @@ namespace Bulbs
     {
         public static void Full(Bulb bulb)
         {
-            
-            if (bulb != null)
+            if (bulb == null)
             {
-                Console.WriteLine(bulb.ToString());
+                throw new ArgumentNullException("Bulb is null!");
             }
+                
+            Console.WriteLine(bulb.ToString());
         }
 
         public static void Common(Bulb bulb)
         {
             int index = 0;
-            if (bulb != null)
+            if (bulb == null)
             {
-                var full = bulb.ToString();
-
-               if (full.Contains("ColorTemp"))
-               {
-                    index = full.IndexOf("ColorTemp");
-               }
-
-                if (full.Contains("ColorSet"))
-                {
-                    index = full.IndexOf("ColorSet");
-                }
-                string common = string.Empty;
-                common = full[0..index];
-                Console.WriteLine(common);
+                throw new ArgumentNullException("Bulb is null!");
             }
+
+            var full = bulb.ToString();
+
+            if (full.Contains("ColorTemp"))
+            {
+                index = full.IndexOf("ColorTemp");
+            }
+
+            if (full.Contains("ColorSet"))
+            {
+                index = full.IndexOf("ColorSet");
+            }
+            string common = string.Empty;
+            common = full[0..index];
+            Console.WriteLine(common);            
         }       
     }
 }
