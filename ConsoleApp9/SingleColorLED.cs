@@ -24,15 +24,12 @@ namespace Bulbs
             Brand = brand;
         }
 
-        public override string ToString()
+        public override string IndividualInfo()
         {
             StringBuilder singleColorLED = new StringBuilder();
             singleColorLED.AppendLine($"TypeOfBulb: {TypeOfBulb}");
-            singleColorLED.AppendLine($"Brand: {Brand}");
-            singleColorLED.AppendLine($"Operation voltage: {OperationVoltage}");
-            singleColorLED.AppendLine($"Power consumption: {PowerConsumption}");
             singleColorLED.AppendLine($"Color temperature: {ColorTemperature}");
-            return singleColorLED.ToString();
+            return base.ToString() + singleColorLED.ToString();
         }
     }
 }

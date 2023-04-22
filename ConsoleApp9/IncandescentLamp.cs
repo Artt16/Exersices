@@ -23,15 +23,12 @@ namespace Bulbs
         {           
             Brand = brand;
         }
-        public override string ToString()
+        public override string IndividualInfo() 
         {
             StringBuilder incandescentLamb = new StringBuilder();
             incandescentLamb.AppendLine($"TypeOfBulb: {TypeOfBulb}");
-            incandescentLamb.AppendLine($"Brand: {Brand}");
-            incandescentLamb.AppendLine($"Operation voltage: {OperationVoltage}");
-            incandescentLamb.AppendLine($"Power consumption: {PowerConsumption}");
             incandescentLamb.AppendLine($"Color temperature: {ColorTemperature}");
-            return incandescentLamb.ToString();
+            return base.ToString() + incandescentLamb.ToString();
         }
     }
 }

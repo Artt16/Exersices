@@ -25,15 +25,12 @@ namespace Bulbs
             Brand = brand;  
         }
 
-        public override string ToString()
+        public override string IndividualInfo()
         {
-            StringBuilder  multiColorLED = new StringBuilder();
+            StringBuilder multiColorLED = new StringBuilder();
             multiColorLED.AppendLine($"TypeOfBulb: {TypeOfBulb}");
-            multiColorLED.AppendLine($"Brand: {Brand}");
-            multiColorLED.AppendLine($"Operation voltage: {OperationVoltage}");
-            multiColorLED.AppendLine($"Power consumption: {PowerConsumption}");
             multiColorLED.AppendLine($"ColorSet: {string.Join(',', ColorSet)}");
-            return multiColorLED.ToString();
+            return base.ToString() + multiColorLED.ToString();
         }
     }
 }
