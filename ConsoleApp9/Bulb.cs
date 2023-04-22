@@ -10,6 +10,6 @@ namespace Bulbs
     {
         public string Brand { get; set; }
         protected int OperationVoltage { get; set; }
-        protected string PowerConsumption { get; set; }        
+        protected int PowerConsumption { get; set; }        
     }
 }

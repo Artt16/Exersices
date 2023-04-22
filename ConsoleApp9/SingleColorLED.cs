@@ -15,7 +15,7 @@ namespace Bulbs
             Brand = "No name";
             TypeOfBulb = "SingleColor";
             OperationVoltage = 110;
-            PowerConsumption = "10W";
+            PowerConsumption = 10;
             ColorTemperature = "5000K";
         }
 
