@@ -8,8 +8,8 @@ namespace Bulbs
 {
     public abstract class Bulb
     {
-        private protected string Brand { get; set; }
-        private protected string OperVolt { get; set; }
-        private protected string PowCons { get; set; }        
+        protected string Brand { get; set; }
+        protected string OperVolt { get; set; }
+        protected string PowCons { get; set; }        
     }
 }
